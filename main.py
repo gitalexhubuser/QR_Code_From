@@ -1,7 +1,8 @@
 import qrcode
 
-# Ввод текста
-text = input("Введите текст для QR-кода: ")
+# Чтение текста из файла
+with open('123.txt', 'r', encoding='utf-8') as file:
+    text = file.read()
 
 # Создание QR-кода
 qr = qrcode.QRCode(version=1, box_size=10, border=5)
